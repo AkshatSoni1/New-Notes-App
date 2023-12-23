@@ -90,7 +90,7 @@ const Navbar = () => {
         <>
                 <Link
                   href="/create-note"
-                  className=" text-sky-400  font-semibold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1.5px_0_rgb(1_1_5_/_40%)]"
+                  className=" text-blue-950  font-semibold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Create Note
@@ -107,7 +107,7 @@ const Navbar = () => {
 <div className="flex flex-col items-center">
                 <Link
                   href="/login"
-                  className="text-sky-400 font-bold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1.5px_0_rgb(1_1_5_/_40%)]"
+                  className="text-sky-400 font-bold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Login

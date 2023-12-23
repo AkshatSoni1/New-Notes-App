@@ -6,7 +6,7 @@ const NoteForm = ({type, title, description, setTitle, setDescription, handleSub
   const router = useRouter();
   return (
     <form 
-    className=' z-10 border border-black flex flex-col gap-4 justify-center items-center w-80 lg:w-96 py-12 px-12 rounded-xl bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 shadow-sm shadow-black'
+    className=' z-10 border border-black flex flex-col gap-4 justify-center items-center w-80 lg:w-96 py-8 px-8 rounded-xl bg-gradient-to-r from-slate-700 via-slate-800 to-slate-900 shadow-sm shadow-black'
     onSubmit={handleSubmit}
     >
         <div className="flex flex-col w-full gap-2">
