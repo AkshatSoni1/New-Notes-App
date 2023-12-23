@@ -107,7 +107,7 @@ const Navbar = () => {
 <div className="flex flex-col items-center">
                 <Link
                   href="/login"
-                  className="text-sky-400 font-bold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
+                  className="text-gray-900 font-bold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
                   onClick={() => setToggleDropdown(false)}
                 >
                   Login
