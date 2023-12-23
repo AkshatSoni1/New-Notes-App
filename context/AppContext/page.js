@@ -6,6 +6,7 @@ export const AppContext = createContext();
 const AppState = (props) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [user, setUser] = useState(null);
+    const [count, setCount] = useState(0)
 
     const checkIsLoggedIn = async () => {
       let token = localStorage.getItem('token');
@@ -14,12 +15,12 @@ const AppState = (props) => {
 
         let userObj = localStorage.getItem('token');
         let parsedObj = await JSON.parse(userObj);
-        console.log(parsedObj)
         setUser(parsedObj.userId);
         
       } else {
         setIsLoggedIn(false);
         setUser(null)
+        setCount(0);
       }
     };
     
@@ -28,7 +29,14 @@ const AppState = (props) => {
     }, []);
 
     return(
-        <AppContext.Provider value={{isLoggedIn, setIsLoggedIn, user, setUser}}>
+        <AppContext.Provider value={{
+            isLoggedIn, 
+            setIsLoggedIn, 
+            user, 
+            setUser, 
+            count, 
+            setCount
+          }}>
             {props.children}
         </AppContext.Provider>
     )

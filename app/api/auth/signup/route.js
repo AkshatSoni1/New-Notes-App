@@ -1,6 +1,7 @@
 import connectToDB from "@/utils/database";
 import User from "@/models/user";
 import CryptoJS from "crypto-js";
+import { NextResponse } from "next/server";
 
 export const POST = async (req) => {
     const { name, email, password } = await req.json()
@@ -9,7 +10,7 @@ export const POST = async (req) => {
 
         const user = await User.findOne({email});
         if(user){
-            return new Response("Email already exists!", {status:400})
+            return NextResponse.json({message:"Email already exists!"}, {status:400})
         }
         const newUser = new User({
             name,
@@ -22,6 +23,6 @@ export const POST = async (req) => {
         return new Response(JSON.stringify(newUser), {status:200})
 
     } catch (error) {
-        return new Response("Cannot create user!", {status:500})
+        return NextResponse.json({message:"Cannot sign up!"}, {status:500})
     }
 }

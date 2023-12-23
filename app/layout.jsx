@@ -2,31 +2,40 @@
 import Navbar from "@/components/Navbar"
 import AppState from "@/context/AppContext/page"
 import "@/styles/globals.css"
-import Head from "next/head"
+import { ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css";
 
+export const metadata = {
+  title: "Note-Verse",
+  description: "A useful notes app for you"
+}
 
 const RootLayout = ({ children }) => {
 
   return (
     <html lang="en">
-      <Head>
-        <title>
-          Note-Verse
-        </title>
-        <meta
-          name="description"
-          content="A useful notes app for you"
-          key="desc"
-        />
-      </Head>
       <body>
+        {/* toasts */}
+        <ToastContainer
+          position="top-right"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+
         <AppState>
-          <div className="main">
-            <div className="gradient" />
+          <div className="-z-[6] main">
+            <div className="-z-[5] gradient" />
           </div>
-          <main className="z-10 w-screen min-h-screen bg-gray-200">
+          <main className="z-10 w-screen min-h-screen">
             <Navbar />
-            <div className="z-10 px-10 lg:px-20">
+            <div className="z-10 px-10 md:px-20">
               {children}
             </div>
           </main>

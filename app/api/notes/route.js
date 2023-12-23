@@ -4,19 +4,17 @@ import { NextResponse } from "next/server";
 
 export const GET = async (request) => {
     try {
-        
+
         await connectToDB();
 
         const url = new URL(request.url);
-    const searchParams = new URLSearchParams(url.search);
-    const user = searchParams.get("user"); // Retrieves the value of the 'skip' parameter
+        const searchParams = new URLSearchParams(url.search);
+        const user = searchParams.get("user");
+        
+        const notes = await Note.find({ creator: user })
 
-    console.log(user);
-
-        const notes = await Note.find({creator: user})
-
-        return new Response(JSON.stringify(notes),{status:200})
+        return new Response(JSON.stringify(notes), { status: 200 })
     } catch (error) {
-        return NextResponse.json({message:"Cannot fetch notes"},{status:500})        
+        return NextResponse.json({ message: "Cannot fetch notes" }, { status: 500 })
     }
 }

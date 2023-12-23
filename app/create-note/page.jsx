@@ -4,6 +4,7 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AppContext } from '@/context/AppContext/page'
+import ShowToast from '@/helper/page'
 
 const createNote = () => {
   const { user } = useContext(AppContext)
@@ -23,10 +24,16 @@ const createNote = () => {
           description: description
         })
       });
+      let response = await res.json()
       if(res.ok){
         router.push("/");
         setTitle('')
         setDescription('')
+        ShowToast(true, "Note created!")
+      }
+      else{
+        console.log(res)
+        ShowToast(false, response.message)
       }
     } catch (error) {
       console.log(error)
