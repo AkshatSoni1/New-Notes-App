@@ -87,36 +87,39 @@ const Navbar = () => {
 
           {toggleDropdown && (<div className="bg-gradient-to-r from-sky-50 to-purple-50 z-30 text-center absolute right-10 top-11 mt-3 w-1/2 p-5 rounded-lg min-w-[210px] flex-col gap-2 justify-end items-end max-h-fit shadow-sm shadow-slate-400 py-6">
             {isLoggedIn ?
-              <>
-                <Link
-                  href="/create-note"
-                  className=" text-blue-950  font-semibold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
+              <div className="flex flex-col items-center">
+                <Link href="/create-note" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Create Note
+                  <span class="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
+                  <span class="relative px-3 py-[0.58rem] transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span class="relative text-gray-900 text-lg">Create Note</span>
+                  </span>
                 </Link>
+
                 <button
                   type="button"
                   onClick={handleLogout}
-                  className="mt-3 text-black text-lg shadow-sm shadow-black font-bold tracking-wider bg-gradient-to-r from-sky-300 to-cyan-300 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg px-5 py-2 text-center"
+                  className="mt-4 text-black text-lg shadow-sm shadow-gray-400 font-bold tracking-wider bg-gradient-to-r from-sky-300 to-cyan-300 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg px-7 py-2.5 text-center"
                 >
                   Log Out
                 </button>
-              </>
+                </div>
+          
               :
               <div className="flex flex-col items-center">
-                <Link
-                  href="/login"
-                  className="text-gray-900 font-bold text-xl hover:text-cyan-500 text-center [text-shadow:_0_1px_3px_rgb(0_0_0_/_40%)]"
+                <Link href="/login" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  Login
+                  <span class="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
+                  <span class="relative px-[1.6rem] py-2 transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span class="relative text-gray-900 text-lg">Login</span>
+                  </span>
                 </Link>
                 <Link
-                  type="button"
                   href={"/signup"}
                   onClick={() => setToggleDropdown(false)}
-                  className="w-fit mt-3 text-black text-lg shadow-sm shadow-black font-bold tracking-wider bg-gradient-to-r from-sky-300  to-cyan-300 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg px-4 py-2 text-center"
+                  className="w-fit mt-4 text-gray-900 text-lg shadow-sm shadow-gray-400 font-bold tracking-wider bg-gradient-to-r from-sky-300  to-cyan-300 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 rounded-lg px-4 py-2 text-center"
                 >
                   Sign Up
                 </Link>
