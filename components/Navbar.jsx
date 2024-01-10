@@ -37,7 +37,8 @@ const Navbar = () => {
         ?
         <div className=""></div>
         : */}
-      <nav className="flex justify-between px-10 md:px-20 py-5 bg-gray-900 items-center">
+      <nav className="fixed w-full top-0 flex justify-between px-10 md:px-20 py-5 bg-gray-900 items-center z-50">
+        {/* fixed w-full z-index */}
         <div className="">
           <Link href={isLoggedIn ? "/" : "/login"}
             className=" text-lg font-semibold bg-gradient-to-r from-sky-300 via-cyan-600 to-purple-400 inline-block text-transparent bg-clip-text tracking-[0.3rem]"

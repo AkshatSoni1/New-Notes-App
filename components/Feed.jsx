@@ -73,7 +73,7 @@ const Feed = () => {
                 {isLoggedIn ?
                     <>
                         <div className="">
-                            <h1 className=' mt-10 text-center text-4xl my-5 font-bold text-amber-600'>
+                            <h1 className='mt-24 text-center text-4xl my-5 font-bold text-amber-600'>  {/* mt-10 */}
                                 Hey Buddy👋
                             </h1>
                         </div>
