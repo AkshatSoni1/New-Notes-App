@@ -89,12 +89,12 @@ const Navbar = () => {
           {toggleDropdown && (<div className="bg-gradient-to-r from-sky-50 to-purple-50 z-30 text-center absolute right-10 top-11 mt-3 w-1/2 p-5 rounded-lg min-w-[210px] flex-col gap-2 justify-end items-end max-h-fit shadow-sm shadow-slate-400 py-6">
             {isLoggedIn ?
               <div className="flex flex-col items-center">
-                <Link href="/create-note" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
+                <Link href="/create-note" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  <span class="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
-                  <span class="relative px-3 py-[0.58rem] transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
-                    <span class="relative text-gray-900 text-lg">Create Note</span>
+                  <span className="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
+                  <span className="relative px-3 py-[0.58rem] transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span className="relative text-gray-900 text-lg">Create Note</span>
                   </span>
                 </Link>
 
@@ -109,12 +109,12 @@ const Navbar = () => {
           
               :
               <div className="flex flex-col items-center">
-                <Link href="/login" class="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
+                <Link href="/login" className="relative p-0.5 inline-flex items-center justify-center font-bold overflow-hidden group rounded-md shadow-sm shadow-gray-400"
                   onClick={() => setToggleDropdown(false)}
                 >
-                  <span class="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
-                  <span class="relative px-[1.6rem] py-2 transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
-                    <span class="relative text-gray-900 text-lg">Login</span>
+                  <span className="w-full h-full bg-gradient-to-br from-sky-300  to-cyan-300 group-hover:from-sky-300 group-hover:to-cyan-300 absolute"></span>
+                  <span className="relative px-[1.6rem] py-2 transition-all ease-out bg-white rounded-md group-hover:bg-opacity-0 duration-400">
+                    <span className="relative text-gray-900 text-lg">Login</span>
                   </span>
                 </Link>
                 <Link
