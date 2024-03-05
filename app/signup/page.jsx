@@ -52,7 +52,7 @@ const signup = () => {
   }
   return (
     <>
-      <div className="flex flex-col items-center  justify-center min-h-[80vh]">
+      <div className="flex flex-col items-center  justify-center min-h-screen">
         <div>
           <h1 className='text-3xl pt-12 pb-5 text-blue-950 font-semibold'>
             New Here? Sign Up
